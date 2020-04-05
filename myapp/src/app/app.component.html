@@ -1,0 +1,48 @@
+<h2> 1.-String interpolation </h2>
+<p>Title: {{ title }} </p>
+{{ 'Hola Mundo' }}
+{{ 1 + 2 }}
+
+<h2> 2.-NgModel, requiere FormModule </h2>
+<input type="text" [(ngModel)]="title">
+{{ title }}
+
+<h2> 3.-Condicionales *ngIf </h2>
+<div *ngIf="title === 'nicolas' ">
+  esto es un div
+</div>
+
+<h2> 4.-Uso de ngFor add y delete </h2>
+<button (click)="addItem()">Click me!</button>
+
+<ul>
+  <li *ngIf="items.length === 0"> La lista esta vacia </li>
+  <li *ngFor="let item of items; index as i; trackBy: trackByFn">
+    {{ i }} - {{ item }}
+    <button (click)="deleteItem(i)">delete</button>
+  </li>
+</ul>
+
+<h2> 5.Uso de ngFor para recorrer objetos </h2>
+
+<div *ngFor="let product of products">
+  {{ product.title }}
+  <img [src]="product.image" alt="">
+  {{ product.price }}
+</div>
+
+<h2> 6 ngWitch </h2>
+
+<input type="text" [(ngModel)]="title">
+
+
+<div [ngSwitch]="title">
+  <p *ngSwitchCase=" 'jorge' "> este es jorge</p>
+  <p *ngSwitchCase=" 'julian' "> este es julian</p>
+  <p *ngSwitchCase=" 'camilo' "> este es camilo</p>
+  <p *ngSwitchDefault> No hay match</p>
+</div>
+
+
+<!-- Editor online, para compartir
+htps://stackblitz.com -->

@@ -1,0 +1,26 @@
+Curso Angular
+------------------
+Instal
+NodeJS > 12
+Angular LCI  > 8
+
+Complemento:
+-Angular language services
+-TsLint
+
+Instal Angular Global
+npm i -g  @angular/cli
+   anatlity, services
+ng --version , verificar
+
+ng new angular-8  (platzi-store)
+  add routing? yes
+  use scss? yes
+
+ng serve: entorno desarrollo
+ng build --prod : entorno produccion
+ng serve --port 4600
+
+Strapolation
+-------------
+Mostrar variables en el proyecto
