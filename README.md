@@ -198,7 +198,45 @@ objeto = {}, este tipo de variable no es iterable, tiene que ser un "ARRAY"
   <p *ngSwitchCase=" 'julian' "> este es julian</p>****
   <p *ngSwitchCase=" 'camilo' "> este es camilo</p>
   <p *ngSwitchDefault> No hay match</p>
-</div>
+</div>****
 ```
 
 ## Components
+
+En product.component.ts
+``` js
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-product', 
+  templateUrl: './product.component.html' 
+})
+
+export class ProductComponent {
+}
+```
+Creamos clase ProductComponente, con 'export' indicamos que se puede usar en cualquier parte
+@Componente, tiene metadadatas:
+- selector:  'app-product'
+- templateUrl: hace referencia a que html estará enlazado este componente
+
+En app.module.ts 
+
+Para que angular reconozca el componente parte de la aplicación, importamos 
+
+``` js
+import { ProductComponent } from './components/product.component';
+
+@NgModule({
+  declarations: [
+    ProductComponent // componente creado
+  ]
+})
+export class AppModule { }
+
+```
+
+En product.component.html
+``` html
+<h3>soy un componente en angular</h3>
+```
